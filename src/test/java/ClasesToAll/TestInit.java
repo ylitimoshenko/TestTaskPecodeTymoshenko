@@ -11,20 +11,14 @@ import org.testng.annotations.BeforeMethod;
 public class TestInit {
     public WebDriver driver;
     ChromeOptions options = new ChromeOptions();
-    boolean headless = false;
 
 
     @BeforeMethod
     public void setUp() {
         WebDriverManager.chromedriver().setup();
-
-        options.setHeadless(headless);
+//        comment this out if you with to run in headed mode
+        options.addArguments("headless");
         driver = new ChromeDriver(options);
-        if (headless) {
-            driver.manage().window().setSize(new Dimension(1920, 1200));
-        } else {
-            driver.manage().window().maximize();
-        }
     }
 
     @AfterMethod
