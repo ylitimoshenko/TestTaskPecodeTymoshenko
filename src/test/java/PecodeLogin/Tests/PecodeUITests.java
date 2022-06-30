@@ -19,7 +19,7 @@ public class PecodeUITests extends TestInit {
     }
 
     @Test
-    public void testNameAndPassUserNegative() {
+    public void testNameAndPassUserNegativeNumbersSigns() {
         PecodePage pecodePage = new PecodePage(driver);
         pecodePage.openURL();
         pecodePage.inputUserName().sendKeys("#132&*()");
@@ -41,7 +41,7 @@ public class PecodeUITests extends TestInit {
     }
 
     @Test
-    public void testNameAndPassUserCodNegative() {
+    public void testNameAndPassUserNegativeCode() {
         PecodePage pecodePage = new PecodePage(driver);
         pecodePage.openURL();
         pecodePage.inputUserName().sendKeys("<title>Login</title>\n" +
@@ -77,7 +77,7 @@ public class PecodeUITests extends TestInit {
     }
 
     @Test
-    public void testNameAndPassUserNegative2() {
+    public void testNameAndPassUserNegative() {
         PecodePage pecodePage = new PecodePage(driver);
         pecodePage.openURL();
         pecodePage.inputUserName().sendKeys("bzvxjhgskjdflks");
